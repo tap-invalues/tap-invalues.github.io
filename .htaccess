@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Remove suspicious query parameters
+RewriteCond %{QUERY_STRING} .
+RewriteRule ^(.*)$ /$1? [R=301,L]
